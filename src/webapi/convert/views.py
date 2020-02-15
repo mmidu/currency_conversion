@@ -5,11 +5,6 @@ import os
 import xml.etree.ElementTree as ET
 
 def convert(request, amount, src_currency, dest_currency, reference_date):
-	'''
-	URL EXAMPLE
-	http://localhost:8080/convert/amount=12.12/src_currency=DES/dest_currency=ASD/reference_date=1234-12-12
-
-	'''
 	file_path = os.path.join(settings.DATA_DIR, 'rates.xml')
 	
 	tree = ET.parse(file_path)
@@ -42,5 +37,5 @@ def convert(request, amount, src_currency, dest_currency, reference_date):
 		"amount": result,
 		"currency": dest_currency,
 	}
-	
+
 	return JsonResponse(data)
