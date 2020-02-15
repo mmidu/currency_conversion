@@ -26,7 +26,8 @@ def convert(request, amount, src_currency, dest_currency, reference_date):
 	
 	if src_currency == 'EUR':
 		src_rate = 1
-	elif dest_currency == 'EUR':
+	
+	if dest_currency == 'EUR':
 		dest_rate = 1 
 
 	if dest_rate != 0 and src_rate != 0:
