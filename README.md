@@ -1,3 +1,6 @@
+The aim of this project is to build a simple, light-weight environment for a basic Web API in Django.
+The project features a light-weight development environment containerised with Docker. The reason of using docker-compose instead of just an image and one container is due to possible further expansion of the project.
+
 1) cd into the root directory
 2) copy the .env.dev file into a .env file
 3) check the environment variables defined in the .env file and change them if needed
