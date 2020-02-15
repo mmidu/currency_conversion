@@ -1,0 +1,10 @@
+version: "3.5"
+
+services:
+  django:
+    build: docker/django/.
+    ports:
+      - ${DJANGO_PORT}:8000
+    volumes:
+      - ./src/:/var/www/html
+    container_name: ${DJANGO_CONTAINER_NAME}
