@@ -8,13 +8,15 @@ run_server()
 	fi
 
 	curl https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml > /var/www/html/data/rates.xml
-	python3 webapp/manage.py runserver 0:8000
+	python3 /var/www/html/$PROJECT_NAME/manage.py runserver 0:8000
 }
 
-if [ -f /var/www/html/webapp/manage.py ]
+if [ -f /var/www/html/$PROJECT_NAME/manage.py ]
 then
 	run_server
 else 
-	django-admin startproject webapp
+	django-admin startproject $PROJECT_NAME
+	cd $PROJECT_NAME
+	python3 /var/www/html/$PROJECT_NAME/manage.py startapp convert
 	run_server
 fi

@@ -2,7 +2,7 @@ FROM alpine:latest
 
 RUN apk update && apk add python3 curl
 
-RUN mkdir -p /var/www/html && pip3 install --upgrade pip Django
+RUN mkdir -p /var/www/html && pip3 install --upgrade pip Django xmltodict
 
 WORKDIR /var/www/html
 
