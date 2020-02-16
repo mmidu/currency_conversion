@@ -10,4 +10,4 @@ The project features a light-weight development environment containerised with D
 
 EXAMPLE CURL: http://localhost:8080/convert/amount=10/src_currency=JPY/dest_currency=INR/reference_date=2020-02-14
 
-to execute tests, cd into the root directory and run the 'command docker exec django python3 webapi/manage.py test convert'
+to execute tests, cd into the root directory and run the command 'docker exec django python3 webapi/manage.py test convert'
